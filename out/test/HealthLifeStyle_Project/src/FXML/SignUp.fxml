@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="signup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.SignUpController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="551.0" prefWidth="459.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="140.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@projectphotos/healthy.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#f26507" layoutX="140.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Healthy LifeStyle Registeration Form ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="34.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="33.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="Name" layoutX="35.0" layoutY="178.0" prefHeight="32.0" prefWidth="388.0" promptText="user" />
+                  <TextField fx:id="Email" layoutX="35.0" layoutY="234.0" prefHeight="32.0" prefWidth="388.0" promptText="email@mail.com" />
+                  <Text layoutX="35.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="signUp2" layoutX="298.0" layoutY="448.0" mnemonicParsing="false" onAction="#SignUp_into_Profile" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: #ff6600; -fx-background-radius: 20px;" text="Sign Up" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <RadioButton fx:id="male" layoutX="97.0" layoutY="462.0" mnemonicParsing="false" text="Male">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="female" layoutX="168.0" layoutY="462.0" mnemonicParsing="false" text="Female" toggleGroup="$group">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <Text layoutX="31.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="date" layoutX="33.0" layoutY="400.0" prefHeight="32.0" prefWidth="388.0" />
+                  <PasswordField fx:id="pass" layoutX="33.0" layoutY="288.0" prefHeight="32.0" prefWidth="388.0" promptText=".............">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="passconf" layoutX="33.0" layoutY="342.0" prefHeight="32.0" prefWidth="388.0" promptText=".............">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Text fx:id="txterror" fill="RED" layoutX="51.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="454.0" prefHeight="551.0" prefWidth="341.0" style="-fx-background-color: #ff6600;">
+               <children>
+                  <Text fill="WHITE" layoutX="72.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome !">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#fffbfb" layoutX="83.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create your account now ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="58.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and start a healthy journey with us">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="signin" blendMode="SCREEN" layoutX="105.0" layoutY="375.0" mnemonicParsing="false" onAction="#signinForm" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25px;" text="Sign In">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="76.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an Account ?">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

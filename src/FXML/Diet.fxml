@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="diet" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.Diet">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="547.0" prefWidth="777.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Hyperlink layoutX="12.0" layoutY="491.0" onAction="#BackFromDietToHome" text="&lt; Back" textFill="#4a3636" underline="true">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Hyperlink>
+                <TableView fx:id="dietTable" layoutX="9.0" layoutY="13.0" prefHeight="476.0" prefWidth="763.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="13.0">
+                    <columns>
+                        <TableColumn fx:id="week" minWidth="40.0" prefWidth="75.0" text="Week" />
+                        <TableColumn fx:id="breakfast" prefWidth="262.0" text="Breakfast" />
+                        <TableColumn fx:id="lunch" prefWidth="216.0" text="Lunch" />
+                        <TableColumn fx:id="dinner" prefWidth="214.0" text="Dinner" />
+                    </columns>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+                </TableView>
+            </children></AnchorPane>
+    </children>
+</GridPane>

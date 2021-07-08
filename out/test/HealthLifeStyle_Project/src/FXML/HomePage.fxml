@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="Home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.HomePage_Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="539.0" prefWidth="777.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="564.0" fitWidth="844.0" layoutX="-44.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@projectphotos/diet-concept-with-sport-woman-healthy-food_23-2148193237.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="16.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="user" layoutX="62.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#575454" layoutX="16.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is your program to be Healthy. " wrappingWidth="158.85498046875">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#656262" layoutX="535.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Weight:">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#616060" layoutX="535.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your BMI:">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#5e5d5d" layoutX="535.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Required Calories:">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="userBmi" layoutX="636.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="userWght" layoutX="666.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="calo" layoutX="718.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button blendMode="OVERLAY" layoutX="53.0" layoutY="168.0" mnemonicParsing="false" onAction="#WORKOUT" prefHeight="144.0" prefWidth="193.0" style="-fx-background-color: #000000; -fx-background-radius: 30px;" text="WORKOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Button blendMode="OVERLAY" layoutX="410.0" layoutY="345.0" mnemonicParsing="false" onAction="#DIET" prefHeight="144.0" prefWidth="193.0" style="-fx-background-color: #000000; -fx-background-radius: 30px;" text="DIET" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Button blendMode="OVERLAY" layoutX="175.0" layoutY="345.0" mnemonicParsing="false" onAction="#WATER" prefHeight="144.0" prefWidth="193.0" style="-fx-background-color: #000000; -fx-background-radius: 30px;" text="WATER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Button blendMode="OVERLAY" layoutX="297.0" layoutY="168.0" mnemonicParsing="false" onAction="#Calories_Search" prefHeight="144.0" prefWidth="193.0" style="-fx-background-color: #000000; -fx-background-radius: 30px;" text=" Calories  " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button blendMode="OVERLAY" layoutX="531.0" layoutY="168.0" mnemonicParsing="false" onAction="#Some_Tips" prefHeight="144.0" prefWidth="193.0" style="-fx-background-color: #000000; -fx-background-radius: 30px;" text="Some Tips" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="13.0" layoutY="491.0" onAction="#LogOut" text="Log Out" textFill="#545252">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Hyperlink>
+         </children></AnchorPane>
+   </children>
+</GridPane>

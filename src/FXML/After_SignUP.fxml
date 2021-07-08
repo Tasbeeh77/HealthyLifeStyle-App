@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="BMI" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.After_SignUp_Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Text fill="#0d345e" layoutX="36.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Before starting your journey, please fill the following fields to calculate your Body Mass Index ( BMI ) &amp; your required calories." wrappingWidth="731.033203125">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <ListView layoutX="27.0" layoutY="386.0" prefHeight="48.0" prefWidth="109.0" style="-fx-background-radius: 25px; -fx-background-color: #0b2743;" />
+            <ListView fx:id="bmi_res" layoutX="140.0" layoutY="386.0" prefHeight="48.0" prefWidth="449.0" style="-fx-background-radius: 10px;" />
+            <Text fx:id="calc" fill="WHITE" layoutX="36.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your BMI :" textAlignment="CENTER" wrappingWidth="91.787109375">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="res" fill="WHITE" layoutX="331.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="37.6" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+            <ListView layoutX="131.0" layoutY="458.0" orientation="HORIZONTAL" prefHeight="64.0" prefWidth="109.0" style="-fx-background-color: #ff9900; -fx-background-radius: 10px;" />
+            <ListView layoutX="252.0" layoutY="459.0" orientation="HORIZONTAL" prefHeight="64.0" prefWidth="109.0" style="-fx-background-color: #00cc00; -fx-background-radius: 10px;" />
+            <ListView layoutX="372.0" layoutY="460.0" orientation="HORIZONTAL" prefHeight="64.0" prefWidth="109.0" style="-fx-background-color: #ff794d; -fx-background-radius: 10px;" />
+            <ListView layoutX="490.0" layoutY="460.0" orientation="HORIZONTAL" prefHeight="64.0" prefWidth="109.0" style="-fx-background-color: #ff0000; -fx-background-radius: 10px;" />
+            <Text fill="WHITE" layoutX="142.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Underweight">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="164.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;18.5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="256.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normal Weight">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="276.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18.5 - 25">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="385.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overweight">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="402.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25 - 30">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="523.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obese">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="531.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;30">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="start" layoutX="618.0" layoutY="385.0" mnemonicParsing="false" onAction="#Start_HomePage" prefHeight="48.0" prefWidth="153.0" style="-fx-background-radius: 25px; -fx-background-color: #00cc00;" text="Let's be Healthy!" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Text fx:id="restxt" fill="#1c238a" layoutX="592.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="183.13671875">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="advise_txt" layoutX="587.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.1367187499999">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ListView layoutX="27.0" layoutY="72.0" prefHeight="299.0" prefWidth="552.0" style="-fx-background-color: #0b2743; -fx-background-radius: 25px;" />
+            <Text fill="#101b5e" layoutX="12.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI Criteria Range : " textAlignment="CENTER" wrappingWidth="125.0">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="69.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="weight" layoutX="171.0" layoutY="105.0" prefHeight="36.0" prefWidth="351.0" style="-fx-background-radius: 15px;" />
+            <Text fill="WHITE" layoutX="71.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="height" layoutX="171.0" layoutY="156.0" prefHeight="36.0" prefWidth="351.0" style="-fx-background-radius: 15px;" />
+            <Text fill="WHITE" layoutX="133.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="( M )" />
+            <Text fill="WHITE" layoutX="132.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="( Kg )" />
+            <Text fill="WHITE" layoutX="82.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="AGE" layoutX="171.0" layoutY="206.0" prefHeight="36.0" prefWidth="351.0" style="-fx-background-radius: 15px;" />
+            <Text fill="WHITE" layoutX="77.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activity">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="active" layoutX="171.0" layoutY="254.0" prefHeight="36.0" prefWidth="351.0" promptText="None" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="None" />
+                     <String fx:value="Light" />
+                     <String fx:value="moderately" />
+                     <String fx:value="intensely" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Button blendMode="SCREEN" layoutX="172.0" layoutY="310.0" mnemonicParsing="false" onAction="#Calculate_BMI" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-radius: 25px;" text="Calculate BMI" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button blendMode="SCREEN" layoutX="358.0" layoutY="310.0" mnemonicParsing="false" onAction="#Calculate_Calories" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-radius: 25px;" text="Calculate Calories" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <RadioButton layoutX="37.0" layoutY="322.0" mnemonicParsing="false" text="Female" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="109.0" layoutY="322.0" mnemonicParsing="false" text="Male" textFill="WHITE" toggleGroup="$gender">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

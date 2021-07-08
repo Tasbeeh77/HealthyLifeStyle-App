@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="Calories_search" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.Calories_controller">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="551.0" prefWidth="777.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TextField fx:id="search" layoutX="52.0" layoutY="14.0" onAction="#Search_in_Table" prefHeight="36.0" prefWidth="673.0" />
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="689.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@projectphotos/search_icon.png" />
+               </image>
+            </ImageView>
+            <Button blendMode="SRC_ATOP" layoutX="167.0" layoutY="485.0" mnemonicParsing="false" onAction="#Show_all" prefHeight="36.0" prefWidth="143.0" style="-fx-background-color: #3c88da; -fx-background-radius: 20px;" text="Show all data" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#1e4a79" layoutX="189.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search For a specific food or show all Data">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#4a6aab" layoutX="141.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="And if you want to add food press the INSERT button below">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Hyperlink layoutX="14.0" layoutY="488.0" onAction="#BackFromCaloriesToHome" text="&lt; Back">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Button blendMode="SRC_ATOP" layoutX="451.0" layoutY="485.0" mnemonicParsing="false" onAction="#InsertData" prefHeight="36.0" prefWidth="143.0" style="-fx-background-color: #3c88da; -fx-background-radius: 20px;" text="INSERT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TableView fx:id="table_view" layoutX="52.0" layoutY="72.0" prefHeight="399.0" prefWidth="673.0" style="-fx-background-color: #ffffff; -fx-border-color: #99ccff;" visible="false">
+               <columns>
+                  <TableColumn fx:id="food_name" prefWidth="170.0" text="Food Name" />
+                  <TableColumn fx:id="amount" prefWidth="170.0" text="Food Amount" />
+                  <TableColumn fx:id="unit" prefWidth="170.0" text="Food Unit" />
+                  <TableColumn fx:id="food_cal" prefWidth="170.0" text="calories" />
+               </columns>
+            </TableView>
+            <AnchorPane fx:id="insetData" prefHeight="548.0" prefWidth="792.0" style="-fx-background-color: #8da8da;" visible="false">
+               <children>
+                  <TextField fx:id="foName" layoutX="190.0" layoutY="124.0" prefHeight="44.0" prefWidth="516.0" style="-fx-background-radius: 15px;" />
+                  <TextField fx:id="foAmount" layoutX="190.0" layoutY="194.0" prefHeight="44.0" prefWidth="516.0" style="-fx-background-radius: 15px;" />
+                  <TextField fx:id="FoUnit" layoutX="190.0" layoutY="264.0" prefHeight="44.0" prefWidth="516.0" style="-fx-background-radius: 15px;" />
+                  <TextField fx:id="FoCalories" layoutX="190.0" layoutY="337.0" prefHeight="44.0" prefWidth="516.0" style="-fx-background-radius: 15px;" />
+                  <Text fill="WHITE" layoutX="60.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Name :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="60.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Amount :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="60.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Unit :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="60.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Calories :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="291.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT Food Calories">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="331.0" layoutY="416.0" mnemonicParsing="false" onAction="#insertDataToCaloriesTable" prefHeight="53.0" prefWidth="178.0" style="-fx-background-color: #8da8da; -fx-border-radius: 25px; -fx-border-color: #ffffff;" text="DONE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink layoutX="6.0" layoutY="491.0" onAction="#BackToTable" text="&lt; Back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</GridPane>
